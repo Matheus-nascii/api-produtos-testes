@@ -1,0 +1,78 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\malac\Projeto N3 Teste de Softwares\N3-Testes\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\malac\Projeto N3 Teste de Softwares\N3-Testes
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.16.0, cov-7.1.0
+collecting ... collected 47 items
+
+tests/test_repository.py::test_criar_gera_ids_sequenciais PASSED         [  2%]
+tests/test_repository.py::test_listar_comeca_vazio PASSED                [  4%]
+tests/test_repository.py::test_listar_devolve_todos PASSED               [  6%]
+tests/test_repository.py::test_buscar_existente PASSED                   [  8%]
+tests/test_repository.py::test_buscar_inexistente_devolve_none PASSED    [ 10%]
+tests/test_repository.py::test_atualizar_existente PASSED                [ 12%]
+tests/test_repository.py::test_atualizar_inexistente_devolve_none PASSED [ 14%]
+tests/test_repository.py::test_excluir_existente PASSED                  [ 17%]
+tests/test_repository.py::test_excluir_inexistente_devolve_false PASSED  [ 19%]
+tests/test_repository.py::test_limpar_apaga_tudo_e_reinicia_ids PASSED   [ 21%]
+tests/test_routes.py::test_criar_produto_retorna_201 PASSED              [ 23%]
+tests/test_routes.py::test_listar_sem_produtos_retorna_lista_vazia PASSED [ 25%]
+tests/test_routes.py::test_listar_retorna_todos PASSED                   [ 27%]
+tests/test_routes.py::test_buscar_por_id_retorna_200 PASSED              [ 29%]
+tests/test_routes.py::test_atualizar_retorna_200_com_dados_novos PASSED  [ 31%]
+tests/test_routes.py::test_excluir_retorna_204_e_produto_some PASSED     [ 34%]
+tests/test_routes.py::test_buscar_inexistente_retorna_404 PASSED         [ 36%]
+tests/test_routes.py::test_atualizar_inexistente_retorna_404 PASSED      [ 38%]
+tests/test_routes.py::test_excluir_inexistente_retorna_404 PASSED        [ 40%]
+tests/test_routes.py::test_excluir_duas_vezes_retorna_404_na_segunda PASSED [ 42%]
+tests/test_routes.py::test_criar_com_dado_invalido_retorna_422[alteracao0] PASSED [ 44%]
+tests/test_routes.py::test_criar_com_dado_invalido_retorna_422[alteracao1] PASSED [ 46%]
+tests/test_routes.py::test_criar_com_dado_invalido_retorna_422[alteracao2] PASSED [ 48%]
+tests/test_routes.py::test_criar_com_dado_invalido_retorna_422[alteracao3] PASSED [ 51%]
+tests/test_routes.py::test_criar_com_dado_invalido_retorna_422[alteracao4] PASSED [ 53%]
+tests/test_routes.py::test_criar_com_dado_invalido_retorna_422[alteracao5] PASSED [ 55%]
+tests/test_routes.py::test_criar_com_dado_invalido_retorna_422[alteracao6] PASSED [ 57%]
+tests/test_routes.py::test_criar_sem_campo_obrigatorio_retorna_422 PASSED [ 59%]
+tests/test_routes.py::test_criar_com_corpo_vazio_retorna_422 PASSED      [ 61%]
+tests/test_routes.py::test_atualizar_com_dado_invalido_retorna_422 PASSED [ 63%]
+tests/test_routes.py::test_id_que_nao_e_numero_retorna_422 PASSED        [ 65%]
+tests/test_schemas.py::test_aceita_produto_valido PASSED                 [ 68%]
+tests/test_schemas.py::test_remove_espacos_das_pontas_do_nome PASSED     [ 70%]
+tests/test_schemas.py::test_aceita_estoque_zero PASSED                   [ 72%]
+tests/test_schemas.py::test_recusa_valor_invalido[nome-] PASSED          [ 74%]
+tests/test_schemas.py::test_recusa_valor_invalido[nome-   ] PASSED       [ 76%]
+tests/test_schemas.py::test_recusa_valor_invalido[nome-ab] PASSED        [ 78%]
+tests/test_schemas.py::test_recusa_valor_invalido[nome-valor3] PASSED    [ 80%]
+tests/test_schemas.py::test_recusa_valor_invalido[preco-0] PASSED        [ 82%]
+tests/test_schemas.py::test_recusa_valor_invalido[preco--10] PASSED      [ 85%]
+tests/test_schemas.py::test_recusa_valor_invalido[estoque--1] PASSED     [ 87%]
+tests/test_schemas.py::test_recusa_valor_invalido[estoque-2.5] PASSED    [ 89%]
+tests/test_schemas.py::test_recusa_valor_invalido[estoque-muitos] PASSED [ 91%]
+tests/test_schemas.py::test_recusa_campo_obrigatorio_faltando[nome] PASSED [ 93%]
+tests/test_schemas.py::test_recusa_campo_obrigatorio_faltando[preco] PASSED [ 95%]
+tests/test_schemas.py::test_recusa_campo_obrigatorio_faltando[estoque] PASSED [ 97%]
+tests/test_schemas.py::test_recusa_campo_que_nao_existe PASSED           [100%]
+
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  C:\Users\malac\Projeto N3 Teste de Softwares\N3-Testes\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.12.10-final-0 _______________
+
+Name                Stmts   Miss  Cover   Missing
+-------------------------------------------------
+app\__init__.py         0      0   100%
+app\main.py             4      0   100%
+app\repository.py      27      0   100%
+app\routes.py          31      0   100%
+app\schemas.py          8      0   100%
+-------------------------------------------------
+TOTAL                  70      0   100%
+Coverage HTML written to dir htmlcov
+Required test coverage of 90% reached. Total coverage: 100.00%
+======================== 47 passed, 1 warning in 2.93s ========================

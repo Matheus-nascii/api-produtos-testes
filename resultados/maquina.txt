@@ -1,0 +1,6 @@
+﻿Data: 18/11/2026 14:51
+Processador: 13th Gen Intel(R) Core(TM) i5-13420H (8 núcleos, 12 threads)
+Memória RAM: 7.7 GB
+Sistema: Microsoft Windows 11 Home Single Language
+Python: Python 3.12.10
+k6: k6.exe v2.4.0 (commit/dd9395906d, go1.26.11, windows/amd64)

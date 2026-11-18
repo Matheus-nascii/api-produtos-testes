@@ -1,0 +1,37 @@
+[
+  {
+    "passo": "01-post",
+    "codigo": "201",
+    "resposta": "{\n  \"nome\": \"Teclado mecânico\",\n  \"preco\": 199.9,\n  \"estoque\": 10,\n  \"id\": 1\n}"
+  },
+  {
+    "passo": "02-get-lista",
+    "codigo": "200",
+    "resposta": "[\n  {\n    \"nome\": \"Teclado mecânico\",\n    \"preco\": 199.9,\n    \"estoque\": 10,\n    \"id\": 1\n  }\n]"
+  },
+  {
+    "passo": "03-get-id",
+    "codigo": "200",
+    "resposta": "{\n  \"nome\": \"Teclado mecânico\",\n  \"preco\": 199.9,\n  \"estoque\": 10,\n  \"id\": 1\n}"
+  },
+  {
+    "passo": "04-put",
+    "codigo": "200",
+    "resposta": "{\n  \"nome\": \"Teclado mecânico\",\n  \"preco\": 179.9,\n  \"estoque\": 8,\n  \"id\": 1\n}"
+  },
+  {
+    "passo": "05-delete",
+    "codigo": "204",
+    "resposta": " date: Wed,18 Nov 2026 16:28:51 GMT \n server: uvicorn "
+  },
+  {
+    "passo": "06-get-404",
+    "codigo": "404\nUndocumented",
+    "resposta": "{\n  \"detail\": \"Produto não encontrado\"\n}"
+  },
+  {
+    "passo": "07-post-422",
+    "codigo": "422",
+    "resposta": "{\n  \"detail\": [\n    {\n      \"type\": \"greater_than\",\n      \"loc\": [\n        \"body\",\n        \"preco\"\n      ],\n      \"msg\": \"Input should be greater than 0\",\n      \"input\": -5,\n      \"ctx\": {\n        \"gt\": 0\n      }\n    }\n  ]\n}"
+  }
+]
